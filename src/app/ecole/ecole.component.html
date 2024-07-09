@@ -1,0 +1,61 @@
+
+<ng-template #loading>
+    <div class="text-center pt-5">
+        <div class="spinner-border text-primary text-center col-2 m-auto" role="status"></div>  
+        <p>Chargement de la liste...</p>
+    </div>
+  </ng-template>
+  
+  
+  <div class="divTableau" *ngIf="!isLoading; else loading">
+   <div class="container mt-5">
+    <div class="d-flex">
+        <div class="w-50">
+            <input type="text" placeholder="Recherche..." class="form-control">
+        </div>
+        <div class="w-50">
+            <button class="btn btn-primary form-control" routerLink="/ecole/form"> Ajouter </button>
+        </div>
+    </div>
+    <table class="table container mt-2 border">
+        <thead class="table-light bg-primary">
+            <th style="width: 200px;">ID</th>
+            <th style="width: 500px;">Nom de l'ecole</th>
+            <th style="width: 500px;">Fr_Adresse</th>
+            <th style="width: 500px;">code etablissement</th>
+            <th style="width: 500px;">Nom du responsable</th>
+            <th style="width: 500px;">TelephoneResponsable</th>
+            <th class="d-flex d-flex" style="justify-content: center;">Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let element of elements">
+                <th>{{element.IDECOLES}}</th>
+                <th>{{element.Fr_NomEcole}}</th>
+                <th>{{element.Fr_Adresse}}</th>
+                <th>{{element.CodeEtab}}</th>
+                <th>{{element.NomPrenomResponsable}}</th>
+                <th>{{element.TelephoneResponsable}}</th>
+  
+                <td class="actions">
+                    <div class="" style="position: relative;">
+                        <div class="d-flex" style="justify-content: center;">
+                            <button class="btn btn-primary mx-2" (click)="view(element.IDECOLES)">
+                                <!-- <i class="fa-solid fa-eye"></i> -->
+                                 voir
+                            </button>
+                            <button class="btn btn-success mx-2" (click)="edit(element.IDECOLES)">
+                                <!-- <i class="fa-solid fa-pen"></i> -->
+                                 modifier
+                            </button>
+                            <button class="btn btn-danger  mx-2" (click)="delete(element)">
+                                <!-- <i class="fa-solid fa-trash"></i> -->
+                                 supprimer
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+   </div>
+  </div>
