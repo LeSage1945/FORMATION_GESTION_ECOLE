@@ -5,6 +5,7 @@ import { ActionEcoleComponent } from './ecole/action-ecole/action-ecole.componen
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { FormulaireComponent } from './resultat/formulaire/formulaire.component';
 
 const routes: Routes = [
   {path: 'ecole', component: EcoleComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'ecole/form', component: ActionEcoleComponent},
   {path: 'footer', component: FooterComponent},
   {path: 'header', component: HeaderComponent},
-  {path: 'acceuil', component: AcceuilComponent}
+  {path: 'acceuil', component: AcceuilComponent},
+  {path: 'verification', component: FormulaireComponent}
 ];
 
 @NgModule({

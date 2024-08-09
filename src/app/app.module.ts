@@ -10,6 +10,7 @@ import { ActionEcoleComponent } from './ecole/action-ecole/action-ecole.componen
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { FormulaireComponent } from './resultat/formulaire/formulaire.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
     FooterComponent,
     ActionEcoleComponent,
     AcceuilComponent,
+    FormulaireComponent,
   ],
   imports: [
     BrowserModule,
