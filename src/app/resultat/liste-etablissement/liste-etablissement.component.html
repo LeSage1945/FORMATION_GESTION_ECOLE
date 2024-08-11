@@ -1,0 +1,39 @@
+
+<section style="background-color: #ffeb3b; border: 1px solid ffeb3b;" class="border">
+    <div class="container m-auto" style="height: 90vh;">
+        <h3 class="mt-5 text-center"> Veillez saisir votre numéro de <br> téléphone et votre numéro matricule </h3>
+        <div class="row d-lg-flex d-md-flex" style="margin: 0 auto; align-items: center; height: 80vh;">
+            <div class="w-50" style="margin: 0 auto;">
+                <img src="../../../assets/images/e school logo new.png" alt="" style="width: 100%;">
+            </div>
+            <div class="col-lg-6 col-md-6" style="height: 500px; margin: 0 auto;">
+                <form action="" class="mt-lg-5 mt-md-5" #listeForm="ngForm" (ngSubmit)="createListeAdmin(listeForm)">
+                    <h3 class="text-center">Informations</h3>
+                    <div class="mt-3">
+                        <label for="" class="form-label">Code de l'etablissement</label>
+                        <input name="CodeEcole" [ngModel]="CodeEcole" type="text" class="form-control" placeholder="Numéro du téléphone que vous vérifiez">
+                    </div>
+
+                    <div class="mt-3">
+                        <label for="" class="form-label">Type d'examens</label>
+                        <select class="form-select" id="validationCustom04" name="TypeExamen" [ngModel]="">
+                            <option [value]="">BEPC</option>
+                            <option [value]="">BAC</option>
+                        </select>  
+                    </div>
+
+                    <div class="mt-4">
+                        <label for="" class="form-label">Telephone</label>
+                        <input name="mobile" [ngModel]="mobile" type="text" class="form-control" placeholder="Numéro matricule">
+                    </div>
+
+                    <div class=" row p-3">
+                        <button class="btn mt-2 text-white col-lg-5 col-md-5" style="background-color: #c51162;">Vérifier</button>
+                        <div class="col-2"></div>
+                        <button class="btn mt-2 text-white col-lg-5 col-md-5" style="background-color: #c51162;" (click)="printPDF()">imprimer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

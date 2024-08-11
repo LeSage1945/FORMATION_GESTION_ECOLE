@@ -1,46 +1,21 @@
 
-
-<!-- <div>
-    <div class="container">
-        <h1 class="mt-5"> Bonjour chèr(e) élève, Nous vous souhaitons bonne chance </h1>
-        <div  class="container shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="margin-top: 20px; width: 500px;">
-            <p class="text-center " style="margin-top:10px;  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Veillez saisir votre numéro de téléphone et votre numéro matricule </p>
-                <div>
-                    <div> </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label "  style="margin: 10px 10px 10px 10px;  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Numéro mobile</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Numéro du téléphone que vous vérifiez "  style="margin: 10px 10px 10px 0px;">
-                    </div>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label "  style="margin: 10px 10px 10px 10px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >Numéro matricule</label>
-                    <input type="email" class="form-control " id="exampleFormControlInput1" placeholder="Numéro matricule"  style="margin: 10px 10px 10px 0px;">
-                </div>
-
-                <div> <button class="btn btn-success container"  style="margin: 10px 10px 20px 0px;"> Vérifier</button></div>
-        </div>
-    </div>
-</div> -->
-
-
 <section style="background-color: #ffeb3b; border: 1px solid ffeb3b;" class="border">
     <div class="container m-auto" style="height: 90vh;">
         <h3 class="mt-5 text-center"> Veillez saisir votre numéro de <br> téléphone et votre numéro matricule </h3>
-        <div class="d-lg-flex d-md-flex" style="margin: 0 auto; align-items: center; height: 80vh;">
+        <div class="row d-lg-flex d-md-flex" style="margin: 0 auto; align-items: center; height: 80vh;">
             <div class="w-50" style="margin: 0 auto;">
                 <img src="../../../assets/images/e school logo new.png" alt="" style="width: 100%;">
             </div>
-            <div class="w-50" style="height: 500px; margin: 0 auto;">
-                <form action="" class="mt-lg-5 mt-md-5">
+            <div class="col-lg-6 col-md-6" style="height: 500px; margin: 0 auto;">
+                <form action="" class="mt-lg-5 mt-md-5" #resultatForm="ngForm" (ngSubmit)="onSubmitForm(resultatForm)">
                     <h3 class="text-center">Informations</h3>
                     <div class="mt-3">
                         <label for="" class="form-label">Numéro mobile</label>
-                        <input type="text" class="form-control" placeholder="Numéro du téléphone que vous vérifiez">
+                        <input name="mobile" [ngModel]="mobile" type="text" class="form-control" placeholder="Numéro du téléphone que vous vérifiez">
                     </div>
                     <div class="mt-4">
                         <label for="" class="form-label">Numéro matricule</label>
-                        <input type="text" class="form-control" placeholder="Numéro matricule">
+                        <input name="matricule" [ngModel]="matricule" type="text" class="form-control" placeholder="Numéro matricule">
                     </div>
                     <div class="mt-4">
                         <button class="btn form-control text-white" style="background-color: #c51162;;">Vérifier</button>

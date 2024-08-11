@@ -110,6 +110,7 @@ export class ActionEcoleComponent {
       this.ecoleService.getOneEcole(IDECOLE).subscribe((data) =>{
         console.log(data);
         this.isloadinPage = false
+        
         this.IDECOLES = data.IDECOLES
         this.CodeEtab = data.CodeEtab
         this.Ar_NomEcole = data.Ar_NomEcole

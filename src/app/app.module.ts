@@ -11,6 +11,7 @@ import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { FormulaireComponent } from './resultat/formulaire/formulaire.component';
+import { ListeEtablissementComponent } from './resultat/liste-etablissement/liste-etablissement.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormulaireComponent } from './resultat/formulaire/formulaire.component'
     ActionEcoleComponent,
     AcceuilComponent,
     FormulaireComponent,
+    ListeEtablissementComponent,
   ],
   imports: [
     BrowserModule,
