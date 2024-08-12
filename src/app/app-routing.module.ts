@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { FormulaireComponent } from './resultat/formulaire/formulaire.component';
 import { ListeEtablissementComponent } from './resultat/liste-etablissement/liste-etablissement.component';
+import { TableauComponent } from './resultat/liste-etablissement/tableau/tableau.component';
 
 const routes: Routes = [
   {path: 'ecole', component: EcoleComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'header', component: HeaderComponent},
   {path: 'acceuil', component: AcceuilComponent},
   {path: 'verification', component: FormulaireComponent},
-  {path: 'etablissement/liste', component: ListeEtablissementComponent}
+  {path: 'etablissement/liste', component: ListeEtablissementComponent},
+  {path: 'listeAdmis/:data', component: TableauComponent}
 ];
 
 @NgModule({

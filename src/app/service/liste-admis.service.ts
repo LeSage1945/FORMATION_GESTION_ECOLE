@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GlobalService } from './global.service';
 import { modelListeEtablissement } from '../model/modelListeEtablissement';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class ListeAdmisService {
     private globaleService: GlobalService
   ) { }
 
-  createListeAdmis(etablissement: modelListeEtablissement){
+  createListeAdmis(etablissement: modelListeEtablissement): Observable<any>{
     const headers = this.globaleService.getmodelHeader()
     return this.http.post(this.apiUrl + this.uri, etablissement, {headers})
   }

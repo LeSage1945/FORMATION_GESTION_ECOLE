@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { FormulaireComponent } from './resultat/formulaire/formulaire.component';
 import { ListeEtablissementComponent } from './resultat/liste-etablissement/liste-etablissement.component';
+import { TableauComponent } from './resultat/liste-etablissement/tableau/tableau.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ListeEtablissementComponent } from './resultat/liste-etablissement/list
     AcceuilComponent,
     FormulaireComponent,
     ListeEtablissementComponent,
+    TableauComponent,
   ],
   imports: [
     BrowserModule,

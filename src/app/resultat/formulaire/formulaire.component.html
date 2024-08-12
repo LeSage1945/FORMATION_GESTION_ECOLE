@@ -1,3 +1,11 @@
+        <!-- code du chargement -->
+        <!-- <ng-template #loading>
+            <div class="text-center pt-5">
+                <div class="spinner-border text-primary text-center col-2 m-auto" role="status"></div>  
+                <p>Chargement de la liste...</p>
+            </div>
+        </ng-template> -->
+        <!-- fin -->
 
 <section style="background-color: #ffeb3b; border: 1px solid ffeb3b;" class="border">
     <div class="container m-auto" style="height: 90vh;">
@@ -24,4 +32,8 @@
             </div>
         </div>
     </div>
+
+    <!-- <div *ngIf="!isLoading; else loading">
+        <p *ngFor="let item of data" class="bg-success text-white text-center">{{item.message}}</p>
+    </div> -->
 </section>

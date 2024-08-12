@@ -12,6 +12,8 @@ export class FormulaireComponent {
   mobile: any;
   matricule: any;
   message!: string
+  isLoading!: boolean;
+  data!: any
 
   constructor(
     private service: ExamenService,
@@ -21,10 +23,13 @@ export class FormulaireComponent {
   }
 
   onSubmitForm(form: NgForm){
+    // this.isLoading = true
     const resultat: modelResultat = form.value
     console.log(resultat);    
     this.service.createxamenGetResultat(resultat).subscribe((data) =>{
       console.log(data);
+      this.data = data
+      // this.isLoading = false
     })
   }
 }
