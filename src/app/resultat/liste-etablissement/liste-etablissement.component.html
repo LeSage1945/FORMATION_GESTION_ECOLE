@@ -7,7 +7,7 @@
         </ng-template>
         <!-- fin -->
 
-<section style="background-color: #ffeb3b; border: 1px solid ffeb3b;" class="border">
+<section style="background-color: #ffeb3b; border: 1px solid #ffeb3b;" class="border">
     <div class="container m-auto" style="height: 90vh;">
         <h3 class="mt-5 text-center"> Veillez saisir votre numéro de <br> téléphone et votre numéro matricule </h3>
         <div class="row d-lg-flex d-md-flex" style="margin: 0 auto; align-items: center; height: 80vh;">
@@ -18,12 +18,12 @@
                 <form action="" class="mt-lg-5 mt-md-5" #listeForm="ngForm">
                     <h3 class="text-center">Informations</h3>
                     <div class="mt-3">
-                        <label for="" class="form-label">Code de l'etablissement</label>
-                        <input name="CodeEcole" [ngModel]="CodeEcole" type="text" class="form-control" placeholder="Numéro du téléphone que vous vérifiez">
+                        <label for="CodeEcole" class="form-label">Code de l'etablissement</label>
+                        <input name="CodeEcole" [ngModel]="CodeEcole" type="text" class="form-control" placeholder="Code de l'établissement">
                     </div>
 
                     <div class="mt-3">
-                        <label for="" class="form-label">Type d'examens</label>
+                        <label for="TypeExamen" class="form-label">Type d'examens</label>
                         <select class="form-select" id="validationCustom04" [ngModel]="TypeExamen" name="TypeExamen">
                             <option value="BEPC">BEPC</option>
                             <option value="BAC">BAC</option>
@@ -31,8 +31,8 @@
                     </div>
 
                     <div class="mt-4">
-                        <label for="" class="form-label">Telephone</label>
-                        <input name="mobile" [ngModel]="mobile" type="text" class="form-control" placeholder="Numéro matricule">
+                        <label for="mobile" class="form-label">Telephone</label>
+                        <input name="mobile" [ngModel]="mobile" type="text" class="form-control" placeholder="Numéro de téléphone">
                     </div>
 
                     <div class=" row p-3">
@@ -49,20 +49,18 @@
         <table class="table container" *ngIf="!isLoading; else loading">
             <thead style="background-color: blue;">
                 <tr *ngIf="this.data.nom !== ''">
-                    <th class="text-white">ID</th>
-                    <th class="text-center text-white">Nom</th>
-                    <th class="text-center text-white">Prénom</th>
-                    <th class="text-center text-white">Genre</th>
-                    <th class="text-center text-white">Moyenne</th>
+                    <th class=" text-white">Nom</th>
+                    <th class=" text-white">Prénom</th>
+                    <th class=" text-white">Genre</th>
+                    <th class=" text-white">Moyenne</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let item of data">
-                    <td>3</td>
-                    <td class="text-center">{{item.Nom}}</td>
-                    <td class="text-center">{{item.Prenom}}</td>
-                    <td class="text-center">{{item.Sexe}}</td>
-                    <td class="text-center">{{item.MoyenneEleve}}</td>
+                    <td class="">{{item.Nom}}</td>
+                    <td class="">{{item.Prenom}}</td>
+                    <td class="">{{item.Sexe}}</td>
+                    <td class="">{{item.MoyenneEleve}}</td>
                 </tr>
             </tbody>
         </table>

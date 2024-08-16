@@ -5,6 +5,7 @@
                 <p>Chargement de la liste...</p>
             </div>
         </ng-template> -->
+        <!-- *ngIf="!isLoading; else loading" -->
         <!-- fin -->
 
 <section style="background-color: #ffeb3b; border: 1px solid ffeb3b;" class="border">
@@ -19,7 +20,7 @@
                     <h3 class="text-center">Informations</h3>
                     <div class="mt-3">
                         <label for="" class="form-label">Numéro mobile</label>
-                        <input name="mobile" [ngModel]="mobile" type="text" class="form-control" placeholder="Numéro du téléphone que vous vérifiez">
+                        <input name="mobile" [ngModel]="mobile" type="text" class="form-control" placeholder="Numéro du téléphone">
                     </div>
                     <div class="mt-4">
                         <label for="" class="form-label">Numéro matricule</label>

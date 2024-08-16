@@ -1,5 +1,5 @@
 export class modelListeEtablissement{
     CodeEcole!: string
-    mobile!: number
+    mobile!: string
     TypeExamen!: string 
 }

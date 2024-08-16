@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ExamenService } from 'src/app/service/examen.service';
 import { modelResultat } from 'src/app/model/modelResultat';
+import { ErreurService } from 'src/app/erreurGlobal/erreur.service';
+
 
 @Component({
   selector: 'app-formulaire',
@@ -17,6 +19,7 @@ export class FormulaireComponent {
 
   constructor(
     private service: ExamenService,
+    private statutErreur: ErreurService
   ){}
 
   ngOnInit(){
@@ -30,6 +33,11 @@ export class FormulaireComponent {
       console.log(data);
       this.data = data
       // this.isLoading = false
-    })
+    },
+    (error) =>{
+      this.statutErreur.stautError(error)
+    }
+  )
+    
   }
 }
